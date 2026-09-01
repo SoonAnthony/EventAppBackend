@@ -1,19 +1,9 @@
 [project]
 name = "eventappbackend"
 version = "0.1.0"
-description = "Add your description here"
+description = "EventApp Backend"
 readme = "README.md"
-authors = [
-    { name = "SoonAnthony", email = "anthonymedia062@gmail.com" }
-]
 requires-python = ">=3.12"
 dependencies = [
     "fastapi[standard]>=0.141.1",
 ]
-
-[project.scripts]
-eventappbackend = "eventappbackend:main"
-
-[build-system]
-requires = ["uv_build>=0.12.8,<0.13.0"]
-build-backend = "uv_build"
