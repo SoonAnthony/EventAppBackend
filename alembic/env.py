@@ -18,7 +18,7 @@ if config.config_file_name is not None:
 
 from sqlmodel import SQLModel
 from app.core.config import settings
-from app.user import models  # noqa: F401 — registers models on SQLModel.metadata
+from app.user import models
 
 target_metadata = SQLModel.metadata
 
