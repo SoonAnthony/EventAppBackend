@@ -32,7 +32,7 @@ class User(SQLModel, table=True):
     role: UserRole = Field(sa_column=Column(SAEnum(UserRole, name="user_role"),server_default=UserRole.ATTENDEE.value, nullable=False))
     last_known_lat: Optional[float] = Field (nullable=True)
     last_known_lng: Optional[float] = Field (nullable=True)
-    last_location_updated_at: Optional[datetime] = Field(nullable=True)
+    last_location_updated_at:Optional[datetime] = Field(sa_column=Column(DateTime(timezone=True), nullable=True))
     home_city: Optional[str] = Field(nullable=True)
     location_permission_granted:bool = Field(default=False)
     preferred_radius_km: float = Field(default=10.0)
